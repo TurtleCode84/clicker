@@ -1,2 +1,2 @@
-# basic-clicker
-A basic example of a clicker with multiplier and CPS.
+# clicker
+An example of a clicker game with multiplier and CPS.
