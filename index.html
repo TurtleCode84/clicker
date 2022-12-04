@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>Click Master | v0.6</title>
-    <link rel="icon" href="https://clicker.wxyz.rf.gd/play/assets/images/icon.png">
+    <link rel="icon" type="image/png" href="https://clicker.wxyz.rf.gd/play/assets/images/icon.png">
     <audio id="clickSFX" src="https://clicker.wxyz.rf.gd/play/assets/audio/click.wav" preload="auto"></audio>
   </head>
   <body>
@@ -283,6 +283,8 @@
       function addCPS(amount) {
           console.log("Committed: CPS");
           clicks += amount;
+          console.log(clicks); //Debug
+          console.log(amount);
           refresh();
       };
       
