@@ -186,19 +186,9 @@
     </style>
     <script>
         //Prevent using [ENTER] key hack, as it doesn't have a delay >:(
-        //I don't see any reason anyone would need to use tab or space, these don't apply to prompt() so that won't break anyway ~ Turtle 
-        document.onkeydown = function (t) {
-            if (t.which === 9){
-                return false;
-            }
-        }
-        document.onkeydown = function (t) {
-            if (t.which === 13){
-                return false;
-            }
-        }
-        document.onkeydown = function (t) {
-            if (t.which === 32){
+        //Extended to tab and space, doesn't break anything ~ Turtle
+        document.onkeydown = function (t) { // 9 = tab, 13 = enter, 32 = space
+            if (t.which === 9 || t.which === 13 || t.which === 32){
                 return false;
             }
         }
