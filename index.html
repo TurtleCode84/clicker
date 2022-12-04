@@ -280,9 +280,13 @@
       };
 
       function addCPS() {
-          console.log("Committed: CPS");
-          clicks += cps;
-          refresh();
+        console.log("Committed: CPS");
+        clicks += cps;
+        refresh();
+        console.log(clicks);
+        console.log(cps);
+        console.log(typeof clicks);
+        console.log(typeof cps);
       };
       
       function changeCPC(by, price) {
