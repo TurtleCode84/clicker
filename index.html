@@ -1,194 +1,210 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Click Master | v0.6</title>
     <link rel="icon" type="image/png" href="assets/images/icon.png">
     <audio id="clickSFX" src="assets/audio/click.wav" preload="auto"></audio>
-  </head>
-  <body>
+</head>
+
+<body>
     <style>
-      #maxBtn {
-          border-radius: 12px;
-          padding: 8px 20px;
-          width: 60.5%;
-          background-color: #ff937d;
-          color: white;
-          border-color: white;
-          border: 5px solid;
-          transition-duration: 0.1s;
-          font-weight: 550;
-      }
+        #maxBtn {
+            border-radius: 12px;
+            padding: 8px 20px;
+            width: 60.5%;
+            background-color: #ff937d;
+            color: white;
+            border-color: white;
+            border: 5px solid;
+            transition-duration: 0.1s;
+            font-weight: 550;
+        }
 
-      #warning {
-          background-color: #ff1938;
-          border-radius: 12px;
-          padding: 8px 20px;
-          width: 60.5%;
-          color: white;
-          border-color: white;
-          border: 5px solid;
-          transition-duration: 0.1s;
-          font-weight: 550;
-      }
+        #warning {
+            background-color: #ff1938;
+            border-radius: 12px;
+            padding: 8px 20px;
+            width: 60.5%;
+            color: white;
+            border-color: white;
+            border: 5px solid;
+            transition-duration: 0.1s;
+            font-weight: 550;
+        }
 
-      #maxBtn:hover {
-          border-radius: 12px;
-          padding: 8px 20px;
-          width: 60.6%;
-          background-color: #e35f44;
-          color: white;
-          border-color: white;
-          border: 5px solid;
-          transition-duration: 0.1s;
-          font-weight: 550;
-      }
+        #maxBtn:hover {
+            border-radius: 12px;
+            padding: 8px 20px;
+            width: 60.6%;
+            background-color: #e35f44;
+            color: white;
+            border-color: white;
+            border: 5px solid;
+            transition-duration: 0.1s;
+            font-weight: 550;
+        }
 
-      div.break {
-        line-height: 1.6;
-      }
+        div.break {
+            line-height: 1.6;
+        }
 
-      .dark-mode {
-        background-color: black;
-        color: white;
-      }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
 
-      * {
-          cursor: url("assets/images/cursor01.png"), auto; /*Replace Cursor Later*/
-      }
+        * {
+            cursor: url("assets/images/cursor01.png"), auto;
+            /*Replace Cursor Later*/
+        }
 
-      h1 {
-          font-weight: 900;
-      }
+        h1 {
+            font-weight: 900;
+        }
 
-      p {
-          font-weight: 700;
-      }
-      
-      span {
-          font-weight: inherit;
-      }
+        p {
+            font-weight: 700;
+        }
 
-      body {
-          background-color: #ff6242;
-          text-align: center;
-          color: white;
-          font-family: Trebuchet MS, sans-serif;
-      }
+        span {
+            font-weight: inherit;
+        }
 
-      button {
-          border-radius: 12px;
-          padding: 8px 20px;
-          width: 30%;
-          background-color: #ff937d;
-          color: white;
-          border-color: white;
-          border: 5px solid;
-          transition-duration: 0.1s;
-          font-weight: 550;
-      }
+        body {
+            background-color: #ff6242;
+            text-align: center;
+            color: white;
+            font-family: Trebuchet MS, sans-serif;
+        }
 
-      button:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
+        button {
+            border-radius: 12px;
+            padding: 8px 20px;
+            width: 30%;
+            background-color: #ff937d;
+            color: white;
+            border-color: white;
+            border: 5px solid;
+            transition-duration: 0.1s;
+            font-weight: 550;
+        }
 
-      #_button:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-          padding: 45px 120px;
-          width: 60.5%;
-          height: 250%;
-          text-align: center;
-      }
-      #button1:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button2:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button3:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button4:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button5:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button6:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button7:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button8:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button9:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button10:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button11:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button12:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button13:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
-      #button14:hover {
-          background-color: #e35f44;
-          font-weight: 550;
-      }
+        button:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
 
-      #_button {
-          border-radius: 12px;
-          padding: 30px 20px;
-          width: 30%;
-          background-color: #ff937d;
-          color: white;
-          border-color: white;
-          border: 5px solid;
-          font-weight: 550;
-          font-size: 24px;
-          text-align: center;
-      }
+        #_button:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+            padding: 45px 120px;
+            width: 60.5%;
+            height: 250%;
+            text-align: center;
+        }
 
-      #bold1 {
-          font-weight: 900;
-      }
+        #button1:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
 
-      #ok {
-          transition-duration: 0.5s;
-      }
+        #button2:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
 
-      #ok:hover {
-          color: #34d5eb;
-          font-weight: 800;
-      }
+        #button3:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button4:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button5:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button6:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button7:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button8:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button9:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button10:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button11:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button12:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button13:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #button14:hover {
+            background-color: #e35f44;
+            font-weight: 550;
+        }
+
+        #_button {
+            border-radius: 12px;
+            padding: 30px 20px;
+            width: 30%;
+            background-color: #ff937d;
+            color: white;
+            border-color: white;
+            border: 5px solid;
+            font-weight: 550;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #bold1 {
+            font-weight: 900;
+        }
+
+        #ok {
+            transition-duration: 0.5s;
+        }
+
+        #ok:hover {
+            color: #34d5eb;
+            font-weight: 800;
+        }
     </style>
     <script>
         //Prevent using [ENTER] key hack, as it doesn't have a delay >:(
         //Extended to tab and space, doesn't break anything ~ Turtle
         document.onkeydown = function (t) { // 9 = tab, 13 = enter, 32 = space
-            if (t.which === 9 || t.which === 13 || t.which === 32){
+            if (t.which === 9 || t.which === 13 || t.which === 32) {
                 return false;
             }
         }
@@ -207,26 +223,33 @@
     <button onclick="toggleShop()">Toggle Shop</button>
     <div class="break" id="booster-shop">
         <p>Boosters:</p>
-        <button onclick="changeCPC(1, 100)" id="button1">+1 Click Per Click | Cost: 100</button>  
+        <button onclick="changeCPC(1, 100)" id="button1">+1 Click Per Click | Cost: 100</button>
         <button onclick="changeCPC(10, 1000)" id="button2">+10 Clicks Per Click | Cost: 1,000</button><br><br>
         <button onclick="changeCPC(100, 10000)" id="button3">+100 Clicks Per Click | Cost: 10,000</button>
         <button onclick="changeCPC(1000, 100000)" id="button4">+1,000 Clicks Per Click | Cost: 100,000</button><br><br>
         <button onclick="changeCPC(10000, 1000000)">+10,000 Clicks Per Click | Cost: 1,000,000</button>
         <button onclick="changeCPC(100000, 10000000)">+100,000 Clicks Per Click | Cost: 10,000,000</button><br><br>
         <button onclick="changeCPC(1000000, 100000000)">+1,000,000 Clicks Per Click | Cost: 100,000,000</button>
-        <button onclick="changeCPC(10000000, 100000000)">+10,000,000 Clicks Per Click | Cost: 1,000,000,000</button><br><br>
+        <button onclick="changeCPC(10000000, 100000000)">+10,000,000 Clicks Per Click | Cost:
+            1,000,000,000</button><br><br>
         <button onclick="changeCPS(1, 1000)" id="button1">+1 Click Per Sec | Cost: 1,000</button>
         <button onclick="changeCPS(10, 10000)" id="button1">+10 Click Per Sec | Cost: 10,000</button><br><br>
-        <button onclick="setMultiplier(2, 100000)" id="button5">x2 Clicks Per Click | Cost: 100,000</button>  
-        <button onclick="setMultiplier(5, 10000000)" id="button6">x5 Clicks Per Click | Cost: 10,000,000</button><br><br>
-        <button onclick="setMultiplier(10, 100000000)" id="button7">x10 Clicks Per Click | Cost: 100,000,000</button>  
-        <button onclick="setMultiplier(15, 1000000000)" id="button8">x15 Clicks Per Click | Cost: 1,000,000,000</button><br><br>
-        <button onclick="setMultiplier(20, 10000000000)" id="button9">x20 Clicks Per Click | Cost: 10,000,000,000</button>  
-        <button onclick="setMultiplier(25, 250000000000)" id="button10">x25 Clicks Per Click | Cost: 250,000,000,000</button><br><br>
+        <button onclick="setMultiplier(2, 100000)" id="button5">x2 Clicks Per Click | Cost: 100,000</button>
+        <button onclick="setMultiplier(5, 10000000)" id="button6">x5 Clicks Per Click | Cost:
+            10,000,000</button><br><br>
+        <button onclick="setMultiplier(10, 100000000)" id="button7">x10 Clicks Per Click | Cost: 100,000,000</button>
+        <button onclick="setMultiplier(15, 1000000000)" id="button8">x15 Clicks Per Click | Cost:
+            1,000,000,000</button><br><br>
+        <button onclick="setMultiplier(20, 10000000000)" id="button9">x20 Clicks Per Click | Cost:
+            10,000,000,000</button>
+        <button onclick="setMultiplier(25, 250000000000)" id="button10">x25 Clicks Per Click | Cost:
+            250,000,000,000</button><br><br>
         <button onclick="setMultiplier(50, 500000000000)">x50 Clicks Per Click | 500,000,000,000</button>
         <button onclick="setMultiplier(100, 1000000000000)">x100 Clicks Per Click | 1,000,000,000,000</button><br><br>
-        <button onclick="setMultiplier(250, 100000000000000)" id="maxBtn">x250 Clicks Per Click | 100,000,000,000,000</button><br><br>
-        <button onclick="setMultiplier(500, 10000000000000000)" id="maxBtn">x500 Clicks Per Click | 10,000,000,000,000,000</button><br>
+        <button onclick="setMultiplier(250, 100000000000000)" id="maxBtn">x250 Clicks Per Click |
+            100,000,000,000,000</button><br><br>
+        <button onclick="setMultiplier(500, 10000000000000000)" id="maxBtn">x500 Clicks Per Click |
+            10,000,000,000,000,000</button><br>
         <br><br><br>
         <button onclick="prestige()" id="warning" class="warning">Prestige | Cost: Click to See</button>
     </div>
@@ -235,110 +258,111 @@
     <p>Save Data Settings: </p>
     <button onclick="importUserData()" id="button11">Import</button>
     <button onclick="exportUserData()" id="button12">Export</button><br><br>
-    <button onclick="resetAll()" id="warning" class="warning"><span id="bold1">[ ! ]</span> Reset Data</button><br><br><br>
+    <button onclick="resetAll()" id="warning" class="warning"><span id="bold1">[ ! ]</span> Reset
+        Data</button><br><br><br>
     <p><span id="ok" onclick="window.alert('I wish I looked good.');">Appearance</span> Settings: </p>
     <button onclick="toggleDarkMode()" id="button14">[BROKEN] Toggle Dark Mode</button>
     <script type="text/javascript">
-      //JavaScript
-      var clicks = 0;
-      var cpc = 1;
-      var cps = 0; //0 cps means no clicks per second (duh)
-      var owned = false;
-      var multiplier = 1;
-      var isDark = false;
-      var prestigeCount = 1; //1 = 0, and so on
+        //JavaScript
+        var clicks = 0;
+        var cpc = 1;
+        var cps = 0; //0 cps means no clicks per second (duh)
+        var owned = false;
+        var multiplier = 1;
+        var isDark = false;
+        var prestigeCount = 1; //1 = 0, and so on
 
-      const intervalID = setInterval(addCPS, 1000);
-      
-      function refresh() {
-        document.getElementById("counter").innerHTML = clicks;
-        document.getElementById("cpc.count").innerHTML = cpc;
-        document.getElementById("cps.count").innerHTML = cps;
-        document.getElementById("multiplier.count").innerHTML = multiplier;
-        document.getElementById("tot.count").innerHTML = cpc * multiplier;
-        document.getElementById("_button.counter").innerHTML = cpc;
-        document.getElementById("calculated.count").innerHTML = cpc * multiplier;
-      }
-      
-      function addClick(amount) {
-        console.log("Committed: Click")
-        var addTo = amount * multiplier;
-        clicks += addTo;
-        refresh();
-      };
+        const intervalID = setInterval(addCPS, 1000);
 
-      function addCPS() {
-        console.log("Committed: CPS");
-        clicks += cps;
-        refresh();
-      };
-      
-      function changeCPC(by, price) {
-        if (clicks > price - 1) {
-          clicks -= price; //Process purchase (remove clicks)
-          cpc += by; //Upgrade your clicks by mult
-          console.log("Bought +"+by+" CPC!");
-          refresh(); //Screen update
+        function refresh() {
+            document.getElementById("counter").innerHTML = clicks;
+            document.getElementById("cpc.count").innerHTML = cpc;
+            document.getElementById("cps.count").innerHTML = cps;
+            document.getElementById("multiplier.count").innerHTML = multiplier;
+            document.getElementById("tot.count").innerHTML = cpc * multiplier;
+            document.getElementById("_button.counter").innerHTML = cpc;
+            document.getElementById("calculated.count").innerHTML = cpc * multiplier;
+        }
+
+        function addClick(amount) {
+            console.log("Committed: Click")
+            var addTo = amount * multiplier;
+            clicks += addTo;
+            refresh();
         };
-      };
 
-      function changeCPS(by, price) {
-        if (clicks > price - 1) {
-          clicks -= price;
-          cps += by;
-          console.log("Bought "+by+" CPS!");
-          refresh();
+        function addCPS() {
+            console.log("Committed: CPS");
+            clicks += cps;
+            refresh();
         };
-      };
-      
-      function importUserData() {
-        var input = prompt("Save code:");
-        var data = input.split(":");
-        clicks = Number(window.atob(data[0])) / 127893; cpc = Number(window.atob(data[1])) / 127893;
-        multiplier = Number(window.atob(data[2])) / 127893; prestigeCount = Number(window.btoa(data[3])) / 127893;
-        // ^ Set data
-        refresh();
-      };
-      
-      function exportUserData() {
-        var Export = window.btoa(clicks*127893)+":"+window.btoa(cpc*127893)+":"+window.btoa(multiplier*127893)+":"+window.btoa(prestigeCount*127893);
-        window.prompt("Copy your code: ", Export);
-      };
-      
-      function resetAll() {
-        var option = window.confirm("Are you sure?");
-        if (option === true) {
-          clicks = 0;
-          cpc = 1;
-          cps = 0;
-          refresh();
+
+        function changeCPC(by, price) {
+            if (clicks > price - 1) {
+                clicks -= price; //Process purchase (remove clicks)
+                cpc += by; //Upgrade your clicks by mult
+                console.log("Bought +" + by + " CPC!");
+                refresh(); //Screen update
+            };
         };
-      };
-      
-      /*function darkModeToggle() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-        let darkToggle = document.querySelector('#darkToggle');
-          darkToggle.addEventListener('change', ()=> {
-          document.body.classList.toggle('dark');
-        });
-      };*/
 
-      function setMultiplier(mult, price) {
-          if (clicks > price - 1 && multiplier != 2) {
-              multiplier = mult;
-              clicks -= price;
-              owned = true;
-              refresh();
-          } else if (multiplier === mult) {
-              window.alert("You already own this!");
-          };
-      };
+        function changeCPS(by, price) {
+            if (clicks > price - 1) {
+                clicks -= price;
+                cps += by;
+                console.log("Bought " + by + " CPS!");
+                refresh();
+            };
+        };
 
-      function toggleDarkMode() {
-          //document.button.style.transitionDuration = "0.1s";
-          //confirm = window.confirm("Warning:\nThere is a bug which makes transitions nullified after switching to darkmode\nEven switching out won't fix it without reloading. If you prefer the game to be a little more ugly and help your eyes, beware.");
-          window.alert("Hey! I'm broken!");/*
+        function importUserData() {
+            var input = prompt("Save code:");
+            var data = input.split(":");
+            clicks = Number(window.atob(data[0])) / 127893; cpc = Number(window.atob(data[1])) / 127893;
+            multiplier = Number(window.atob(data[2])) / 127893; prestigeCount = Number(window.btoa(data[3])) / 127893;
+            // ^ Set data
+            refresh();
+        };
+
+        function exportUserData() {
+            var Export = window.btoa(clicks * 127893) + ":" + window.btoa(cpc * 127893) + ":" + window.btoa(multiplier * 127893) + ":" + window.btoa(prestigeCount * 127893);
+            window.prompt("Copy your code: ", Export);
+        };
+
+        function resetAll() {
+            var option = window.confirm("Are you sure?");
+            if (option === true) {
+                clicks = 0;
+                cpc = 1;
+                cps = 0;
+                refresh();
+            };
+        };
+
+        /*function darkModeToggle() {
+          var element = document.body;
+          element.classList.toggle("dark-mode");
+          let darkToggle = document.querySelector('#darkToggle');
+            darkToggle.addEventListener('change', ()=> {
+            document.body.classList.toggle('dark');
+          });
+        };*/
+
+        function setMultiplier(mult, price) {
+            if (clicks > price - 1 && multiplier != 2) {
+                multiplier = mult;
+                clicks -= price;
+                owned = true;
+                refresh();
+            } else if (multiplier === mult) {
+                window.alert("You already own this!");
+            };
+        };
+
+        function toggleDarkMode() {
+            //document.button.style.transitionDuration = "0.1s";
+            //confirm = window.confirm("Warning:\nThere is a bug which makes transitions nullified after switching to darkmode\nEven switching out won't fix it without reloading. If you prefer the game to be a little more ugly and help your eyes, beware.");
+            window.alert("Hey! I'm broken!");/*
           if (confirm === true) {
             if (isDark) {
               document.body.style.backgroundColor = "#ff6242";
@@ -378,34 +402,35 @@
               isDark = true;
             };
           };*/
-      };
+        };
 
-      function prestige() {
-          var option = window.confirm("Want to rebirth?\n You must have "+prestigeCount*1000000000000+" ("+prestigeCount+".Q) clicks and a CPC of 1,000,000!");
-          if (option === true) {
-              if (clicks > prestigeCount * 1000000000000 - 1 && cpc > prestigeCount*1000000 - 1) {
-                  var option2 = window.confirm("Are you really sure?! This will wipe your data!");
-                  if (option2 === true) {
-                    prestigeCount += 1;
-                    clicks = 0;
-                    cpc = 2 * prestigeCount;
-                    multiplier = 750 * prestigeCount;
-                    refresh();
-                  };
-              } else {
-                  window.alert("Error: You don't have enough clicks/CPC");
-              };
-          };
-      };
+        function prestige() {
+            var option = window.confirm("Want to rebirth?\n You must have " + prestigeCount * 1000000000000 + " (" + prestigeCount + ".Q) clicks and a CPC of 1,000,000!");
+            if (option === true) {
+                if (clicks > prestigeCount * 1000000000000 - 1 && cpc > prestigeCount * 1000000 - 1) {
+                    var option2 = window.confirm("Are you really sure?! This will wipe your data!");
+                    if (option2 === true) {
+                        prestigeCount += 1;
+                        clicks = 0;
+                        cpc = 2 * prestigeCount;
+                        multiplier = 750 * prestigeCount;
+                        refresh();
+                    };
+                } else {
+                    window.alert("Error: You don't have enough clicks/CPC");
+                };
+            };
+        };
 
-      function toggleShop() {
-          var w = document.getElementById("booster-shop");
-          if (w.style.display === "none") {
-              w.style.display = "block";
-          } else {
-              document.getElementById("booster-shop").style.display = "none";
-          };
-      };
+        function toggleShop() {
+            var w = document.getElementById("booster-shop");
+            if (w.style.display === "none") {
+                w.style.display = "block";
+            } else {
+                document.getElementById("booster-shop").style.display = "none";
+            };
+        };
     </script>
-  </body>
+</body>
+
 </html>
