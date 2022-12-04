@@ -211,7 +211,7 @@
     <p>Your CPS: <span id="cps.count">0</span></p>
     <p>Your multiplier: x<span id="multiplier.count">1</span></p>
     <p>(Clicks Per Click * Multiplier = <span id="tot.count">1</span>)</p>
-    <p>Calculated: +</span id="calculated.count">1</span></p>
+    <p>Calculated: +<span id="calculated.count">1</span></p>
     <button onclick="addClick(cpc)" id="_button">Generate +<span id="_button.counter">1</span> Click(s)</button>
     <br><br>
     <h1>Booster Shop:</h1>
@@ -261,7 +261,7 @@
       var prestigeCount = 1; //1 = 0, and so on
       var cps = 0; //0 cps means no clicks per second (duh)
 
-      const intervalID = setInterval(addCps, 1000, cps);
+      const intervalID = setInterval(addCPS, 1000, cps);
       
       function refresh() {
         document.getElementById("counter").innerHTML = clicks;
@@ -280,7 +280,7 @@
         refresh();
       };
 
-      function addCps(amount) {
+      function addCPS(amount) {
           console.log("Committed: CPS");
           clicks += amount;
           refresh();
