@@ -260,7 +260,7 @@
       var isDark = false;
       var prestigeCount = 1; //1 = 0, and so on
 
-      const intervalID = setInterval(addCPS, 1000, cps);
+      const intervalID = setInterval(addCPS, 1000);
       
       function refresh() {
         document.getElementById("counter").innerHTML = clicks;
@@ -279,9 +279,9 @@
         refresh();
       };
 
-      function addCPS(amount) {
+      function addCPS() {
           console.log("Committed: CPS");
-          clicks += amount;
+          clicks += cps;
           refresh();
       };
       
