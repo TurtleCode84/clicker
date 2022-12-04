@@ -3,8 +3,8 @@
 <html>
   <head>
     <title>Click Master | v0.6</title>
-    <link rel="icon" type="image/png" href="https://clicker.wxyz.rf.gd/play/assets/images/icon.png">
-    <audio id="clickSFX" src="https://clicker.wxyz.rf.gd/play/assets/audio/click.wav" preload="auto"></audio>
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
+    <audio id="clickSFX" src="assets/audio/click.wav" preload="auto"></audio>
   </head>
   <body>
     <style>
@@ -54,7 +54,7 @@
       }
 
       * {
-          cursor: url("https://clicker.wxyz.rf.gd/play/assets/images/cursor01.png"), auto; /*Replace Cursor Later*/
+          cursor: url("assets/images/cursor01.png"), auto; /*Replace Cursor Later*/
       }
 
       h1 {
@@ -186,24 +186,22 @@
     </style>
     <script>
         //Prevent using [ENTER] key hack, as it doesn't have a delay >:(
-        //document.onkeydown = function (t) {
-          //  if(t.which === 9){
-            //    return false;
-           // }
-       // }
-
+        //I don't see any reason anyone would need to use tab or space, these don't apply to prompt() so that won't break anyway ~ Turtle 
         document.onkeydown = function (t) {
-            if(t.which === 13){
+            if (t.which === 9){
                 return false;
             }
         }
-    </script>
-    <script>
-        /*document.onkeydown = function (t) {
-            if(t.which === 32){
+        document.onkeydown = function (t) {
+            if (t.which === 13){
                 return false;
             }
-        }*/
+        }
+        document.onkeydown = function (t) {
+            if (t.which === 32){
+                return false;
+            }
+        }
     </script>
     <h1>Click <span id="ok" onclick="window.alert('Master confirmed!!1!\nThe Real Master: ඞ');">Master</span>!</h1>
     <p>You've clicked <span id="counter">0</span> times.</p>
@@ -216,7 +214,7 @@
     <br><br>
     <h1>Booster Shop:</h1>
     <p>Shop Settings:</p>
-    <button onclick="toggleShop()">Toggle Shop</button> <!-- <button onclick="showShop()">Show Shop</button> -->
+    <button onclick="toggleShop()">Toggle Shop</button>
     <div class="break" id="booster-shop">
         <p>Boosters:</p>
         <button onclick="changeCPC(1, 100)" id="button1">+1 Click Per Click | Cost: 100</button>  
