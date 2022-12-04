@@ -254,12 +254,11 @@
       //JavaScript
       var clicks = 0;
       var cpc = 1;
+      var cps = 0; //0 cps means no clicks per second (duh)
       var owned = false;
-      var addTo = 0;
       var multiplier = 1;
       var isDark = false;
       var prestigeCount = 1; //1 = 0, and so on
-      var cps = 0; //0 cps means no clicks per second (duh)
 
       const intervalID = setInterval(addCPS, 1000, cps);
       
@@ -275,16 +274,14 @@
       
       function addClick(amount) {
         console.log("Committed: Click")
-        addTo = amount * multiplier;
+        var addTo = amount * multiplier;
         clicks += addTo;
         refresh();
       };
 
       function addCPS(amount) {
           console.log("Committed: CPS");
-          clicks += amount;
-          console.log(clicks); //Debug
-          console.log(amount);
+          cps += amount;
           refresh();
       };
       
