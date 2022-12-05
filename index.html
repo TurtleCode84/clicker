@@ -318,14 +318,17 @@
         function importUserData() {
             var input = prompt("Save code:");
             var data = input.split(":");
-            clicks = Number(window.atob(data[0])) / 127893; cpc = Number(window.atob(data[1])) / 127893;
-            multiplier = Number(window.atob(data[2])) / 127893; prestigeCount = Number(window.btoa(data[3])) / 127893;
+            clicks = Number(window.atob(data[0])) / 127893;
+            cpc = Number(window.atob(data[1])) / 127893;
+            multiplier = Number(window.atob(data[2])) / 127893;
+            prestigeCount = Number(window.btoa(data[3])) / 127893;
+            cps = Number(window.btoa(data[4])) / 127893;
             // ^ Set data
             refresh();
         };
 
         function exportUserData() {
-            var Export = window.btoa(clicks * 127893) + ":" + window.btoa(cpc * 127893) + ":" + window.btoa(multiplier * 127893) + ":" + window.btoa(prestigeCount * 127893);
+            var Export = window.btoa(clicks * 127893) + ":" + window.btoa(cpc * 127893) + ":" + window.btoa(multiplier * 127893) + ":" + window.btoa(prestigeCount * 127893) + ":" + window.btoa(cps * 127893);
             window.prompt("Copy your code: ", Export);
         };
 
